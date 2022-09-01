@@ -1,0 +1,8 @@
+.box {
+    width: 640px;
+    height: 360px;
+    background-color: pink;
+    background-image: url("../images/white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
