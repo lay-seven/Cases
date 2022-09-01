@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>删除</button>
+    <button class="clone">复制</button>
+    <ul>
+        <li>熊大</li>
+        <li>熊二</li>
+        <li>光头强</li>
+    </ul>
+    <script>
+        // node.removeChild
+        var ul = document.querySelector('ul');
+        var button = document.querySelector('button');
+        var clone = document.querySelector('.clone');
+        button.onclick = function () {
+            ul.removeChild(ul.children[0]);
+        }
+        clone.onclick = function() {
+            var copy = ul.children[0].cloneNode(1);
+            // node.cloneNode()括号里为false:浅拷贝 true:深拷贝
+            // 浅拷贝：只复制节点本身，不赋值子节点
+            // 深拷贝：所有子节点一起复制
+            ul.insertBefore(copy,ul.children[0]);
+        }
+        // 阻值链接跳转 href = javascript:;
+        console.log(ul.children[0].parentElement.parentElement);
+    </script>
+</body>
+</html>

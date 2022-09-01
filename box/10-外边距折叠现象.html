@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 320px;
+            height: 200px;
+            background-color: pink;
+            /* display: inline-block; */
+            /* border: 20px; */
+            /* overflow: hidden; */
+            margin-bottom: 20px;
+
+        }
+
+        .box3 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        当两个垂直外边距相遇时，它们将形成一个外边距
+        合并后的边距高度：若两者外边距同号，则等于两者外边距中绝对值较大者，若两者外边距异号则为两者之和
+    </div>
+    <div class="box2">
+        塌陷现象：互相嵌套的块级元素，子元素的margin-top会作用在父元素上<br>
+        结果：导致父元素一起塌陷<br>
+        解决方法：<br>
+        1.给父元素设置border-top或者padding-top<br>
+        2.给父元素设置overflow-hidden<br>
+        3.转换成行内块元素<br>
+        4.设置浮动<br>
+    </div>
+
+    <div class="box3">
+
+    </div>
+</body>
+
+</html>

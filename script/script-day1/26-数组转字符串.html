@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [1, 2, 3, 4];
+        console.log(arr);
+        console.log('===========');
+        //
+        // 1.toString()函数用于将当前对象以字符串的形式返回。该方法属于
+        //Object对象，由于所有的对象都"继承"了Object的对象实例，因此几乎所有
+        //的实例对象都可以使用该方法，所有主流浏览器均支持该函数。
+        console.log(arr.toString());
+        console.log('===========');
+        console.log(arr);
+
+        // 2.join(分隔符)
+        console.log(arr.join('-'));//1-2-3-4
+
+        // split('分隔符') 字符转换为数组
+
+        // 字符串的不可变 只能变地址，原地址的字符串不会被删除
+        // 字符串所有的方法都不会修改字符串本身，操作完成会返回一个新的字符串
+        // 所以不要大量的拼接字符串
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

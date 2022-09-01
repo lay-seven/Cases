@@ -1,0 +1,19 @@
+var isPalindrome = function(x) {
+    if(x < 0 || x%10 === 0) return false
+    let reversNum = 0
+    let y = x;
+    if(y > reversNum) {
+        reversNum = reversNum*10 + y%10
+        y -= y % 10;
+        y = y / 10;
+    } else {
+        if(x%2) {
+        
+        }
+        return false
+    }
+};
+
+let x = 123454321;
+
+console.log(isPalindrome(x));

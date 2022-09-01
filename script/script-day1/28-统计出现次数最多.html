@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 统计出现次数最多的字符
+        var str = 'asddfasdujfhiujaj';
+        function strCalculate(str) {
+            var string = {};
+            for (var i = 0; i < str.length; i++) {
+                var chars = str.charAt(i);
+                if (string[chars]) {
+                    string[chars]++;
+                } else
+                    string[chars] = 1;
+            }
+            return string;
+        }
+        var string = strCalculate(str);
+        console.log(string); // 出现过的内容及次数
+
+        // 遍历对象
+        var max = 0;
+        for (var k in string) {
+            if (string[k] > max) {
+                max = string[k];
+            }
+        }
+        console.log(max);// 出现最多的次数3
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

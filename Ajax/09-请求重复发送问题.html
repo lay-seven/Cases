@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重复请求问题</title>
+</head>
+
+<body>
+    <button class="send">点击发送</button>
+    <!-- <button class="cancle">取消请求</button> -->
+
+
+    <script>
+        let x = null;
+        let isSending = false;
+        const btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            
+            if(isSending) {
+                console.log('取消了');
+                x.abort();// 取消请求
+            }
+            x = new XMLHttpRequest();
+            // 修改表示变量
+            isSending = true;
+            x.open('GET', 'http://127.0.0.1:8000/delay');
+            x.send();
+            x.onreadystatechange = function() {
+                if(x.readystate === 4) {
+                    isSending = false;
+                }
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

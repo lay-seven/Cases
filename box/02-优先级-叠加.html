@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        div{
+            color: greenyellow;
+        }
+        div #son{
+            color: orange;
+        }
+        .father p{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        权重叠加计算<br>
+        第一级：行内样式的个数<br>
+        第二级:id选择器个数<br>
+        第三级:类选择器个数<br>
+        第四级:标签选择器个数<br>
+        从第一级到第四级逐级比较，一旦出现数量大的则优先级高<br>
+        注意:!important如果不是继承，则优先级最高<br>
+        全继承时优先级：谁更准谁优先<br>
+    </div>
+    <div class="father">
+        <p class="son" id="son">测试标签1</p>
+    </div>
+</body>
+</html>

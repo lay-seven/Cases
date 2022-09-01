@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href="http://www.baidu.com" class="a">百度</a>
+    </div>
+    <script>
+        // 阻止链接跳转
+        var a = document.querySelector('.a');
+        a.addEventListener('click',fn);
+        function fn(e) {
+            e.preventDefault();// 阻止了跳转 标准写法
+            e.returnValue; // IE浏览器
+        }
+    </script>
+</body>
+</html>

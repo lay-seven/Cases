@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.js"></script>
+</head>
+
+<body>
+    <button>GET</button>
+    <button>POST</button>
+    <button>AJAX</button>
+
+    <script>
+        const btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            axios({
+                method: 'post',
+                url: '/axios-server',
+
+                params: {
+                    vip: 10,
+                    level: 30
+                },
+                // 头信息
+                Headers: {
+                    a: 100,
+                    b: 200
+                },
+                //请求体
+                data: {
+                    username: 'admin',
+                    password: 'admin'
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

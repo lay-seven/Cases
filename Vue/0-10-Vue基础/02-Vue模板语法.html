@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-初识Vue</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- 插值语法用于标签体内容 -->
+        <h1>插值语法</h1>
+        <h3>你好，{{name}}</h3>
+        <hr>
+        <!-- 指令语法用于标签属性 -->
+        <h1>指令语法</h1>
+        <!-- v-bind v绑定 -->
+        <a v-bind:href="url">点我去尚硅谷学习</a>
+        <a :href="url">点我去尚硅谷学习2</a>
+        
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//取消生产提示
+
+    new Vue({
+        el:'#root',
+        data:{
+            name:'尚硅谷',
+            url:'http://atguigu.com',
+        }
+    })
+
+</script>
+
+</html>

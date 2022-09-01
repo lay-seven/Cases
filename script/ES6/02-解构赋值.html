@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数组的结构
+        const troops = ['野蛮人','弓箭手','巨人','天使'];
+        let [a,b,c,d] = troops;
+        // console.log(a+b+c+d);
+
+        // 对象的结构
+        const troop = {
+            fight: function() {
+                console.log('100%'+'三星');
+            }
+        };
+        let {fight} = troop;
+        fight();//100%三星
+
+    </script>
+</body>
+</html>

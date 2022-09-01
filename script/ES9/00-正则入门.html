@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    // 使用对象创建
+    let reg = new RegExp('ab','i');
+    let str = 'aBc';
+    console.log(reg.test(str));
+
+    // 使用字面量创建
+    let reg2 = /s|d/i;// |表示或
+    let str2 = 'addbf';
+    console.log(reg2.test(str2));//true
+
+    let reg3 = /[A-z]/;//[中也是或的关系]
+    let str3 = '阿发阿p䦹'
+    console.log(reg3.test(str3));
+    </script>
+</body>
+</html>

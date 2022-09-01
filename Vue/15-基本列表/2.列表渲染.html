@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>学生信息</h1>
+        <button @click="student.age++">年龄加一</button>
+        <button @click="addSex">添加性别，属性男</button>
+        <button @click="student.sex = '未知'">修改性别</button>
+        <button @click="addFriend">在列表首位添加一个朋友</button>
+        <button @click="updateFriend">修改第一个朋友的名字为张三</button>
+        <button @click="updateHobby">修改爱好为开车</button>
+        <h3>姓名：{{student.name}}</h3>
+        <h3 v-show="student.sex">性别：{{student.sex}}</h3>
+        <h3>年龄:{{student.age}}</h3>
+        <h3>爱好</h3>
+        <ul>
+            <li v-for="(h,index) in student.hobby" :key="index">
+                {{h}}
+            </li>
+        </ul>
+        <h3>朋友们</h3>
+        <ul>
+            <li v-for="(value,key) in student.friends" :key="key">
+                {{value.name}}:{{value.age}}
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//取消生产提示
+
+    const vm = new Vue({
+        el: '#root',
+        data: {
+            student: {
+                name: 'tom',
+                age: 10,
+                hobby: ['抽烟', '喝酒', '烫头'],
+                friends: [
+                    { name: 'jerry', age: 20 },
+                    { name: 'tony', age: 21 }
+                ],
+            }
+        },
+        methods: {
+            addSex() {
+                // Vue.set(this.student,'sex','男');
+                vm.$set(this.student,'sex','男');
+            },
+            addFriend() {
+                this.student.friends.unshift({name:'lily',age:22})
+            },
+            updateFriend() {
+                this.student.friends[0].name = '张三'
+                // this.student.friends[0] = 111//Vue不认，无法响应式
+            },
+            
+            updateHobby() {
+                this.student.hobby.splice(0,1,'开车')
+            }
+        }
+    })
+</script>
+
+</html>

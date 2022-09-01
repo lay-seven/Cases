@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 查找字符串 "avnaosfhodufhsdfoifsfieo"中所有o出现的位置及次数
+        // function arrCheckO(arr) {
+        //     var i = 0;
+        //     var times = 0;
+        //     var location = [];
+        //     i = arr.indexOf('o', i);
+
+        //         while(i  !== -1) {
+        //             times++;
+        //             location[location.length] = i;
+        //             i = arr.indexOf('o', i+1);
+        //         }
+        //         location[location.length] = times;
+        //     return location
+        // }
+        // var arr = "avnaosfhodufhsdfoifsfieo";
+        // console.log(arrCheckO(arr));
+
+        // var str = "avnaosfhodufhsdfoifsfieo";
+        // function strReplace(str) {
+
+
+        //     // var string = str;
+        //     while (str.indexOf('o') != -1) {
+        //         str = str.replace('o','*');
+        //     }
+        //     return str;
+        // }
+        // console.log(strReplace(str));
+
+        var str = 'abaasdffggghhjjkkgfddsssss3444343';
+        // 1. 
+        console.log(str.length);
+        // 2.
+        function strAt(str, index) {
+            return str.charAt(index);
+        }
+        strAt = strAt(str, 0)
+        console.log(strAt);
+        // 3.
+        function charExist(str, char) {
+            return str.indexOf(char) !== -1;
+        }
+        var char = 'b';
+        exist = charExist(str, char);
+        console.log(exist);
+        // 4.
+        function charReplace(str, a, b) {
+            while (str.indexOf(a) !== -1) {
+
+                str = str.replace(a, b);
+
+
+            }
+            return str;
+        }
+        console.log(charReplace(str, 'g', 22));
+        console.log(charReplace(str, 'ss', 'b'));
+        // 5.截取字符串
+        function strSlice(str, start, end) {
+            return str.slice(start, end);
+        }
+        console.log(strSlice(str,0,5));
+        // 6.找出以上字符出现最多的字符和出现次数
+        function charAppear(str) {
+            var string = {};
+            for(var i = 0; i<str.length; i++) {
+                var temp = str.charAt(i);
+                if (string[temp]) {
+                    string[temp]++;
+                }else
+                string[temp] = 1;
+            }
+            return string ;
+        }
+        str2 = charAppear(str);
+        var max = 0;
+        var ch = '';
+        for (k in str2) {
+            
+            if (str2[k] > max) {
+                max = str2[k];
+                ch = k ;
+            }
+        }
+        console.log('出现次数最多的是' + ch + ',出现了' + max + '次');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

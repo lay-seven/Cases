@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 对象是一个具体的事物
+        // 对象是一组无序的相关属性和方法的集合，所有事物都是对象，例如字符
+        // 串数值、数组
+
+        // 对象 创建方法一 键值对
+        var person = new Object();
+        person.name = '孙悟空';
+        person.age = 18;
+        var people = person;
+        console.log(people.name);
+        person.name = '猪八戒';
+        console.log(people.name);
+
+
+
+        console.log(person);
+        console.log(person['name']);
+
+        // var object = new Object();
+        // object.name = '鸣人';
+        // object.age = 19;
+        // object.gender = '男';
+        // object.fn = function(){
+        //     //影分身
+        // }
+        // console.log(object.gender);
+        // 方法二
+        var obj = {
+            name: '猪八戒',
+            age: 17
+        };
+        //方法三 构造函数创建对象
+        function 构造函数名() {
+            this.属性 = 值;
+            this.方法 = function () { }
+        }
+        function Star(names, ages) {
+            this.name = names;
+            this.age = ages;
+            this.sing = function (musics) {
+                console.log(musics);
+            }
+        }
+        // function Hero(name, type, blood) {
+        //     this.name = name;
+        //     this.type = type;
+        //     this.blood = blood;
+        //     this.attack = function(attack){
+        //         console.log(attack);
+        // }
+        // }
+        // var lianpo = new Hero('廉颇','力量型',500);
+        // console.log(lianpo.blood);
+
+        var ldh = new Star('刘德华', 18);// 调用函数返回对象
+        console.log(ldh);
+        ldh.sing('下雨');
+
+
+        // 使用时需要用new:new 构造函数名（）,构造函数名首字母要大写
+        // 不需要return就可以返回结果
+
+        // new关键字执行过程
+        // new 构造函数可以在内存中创建一个空的对象
+        // this 就会指向刚刚创建的空对象
+        // 执行构造函数代码，给这个空对象添加属性和方法
+        // 4.返回这个对象
+
+        // 对象属性的调用  1.对象名.属性名  2.对象名['属性名']
+        // 调用对象的方法  1.对象名.方法名()
+
+        // for in 用于对数组或对象遍历
+        var person = {
+            name: "zhangsan",
+            age: 18
+        }
+
+        for (var personKey in person) {
+            var personVal = person[personKey];
+            console.log(personKey + ":" + personVal);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

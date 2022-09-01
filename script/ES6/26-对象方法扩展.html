@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Object.is
+        console.log(Object.is(NaN,NaN));//true
+        console.log(NaN === NaN);//false
+
+        // Object.assign 对象的合并
+        const config1 = {
+            host:'localhost',
+            port:3306,
+            name:'root',
+            age:20
+        };
+
+        const config2 = {
+            host:'http://atguigu.com',
+            port:33060,
+            name:'atguigu',
+            password:'root'
+        }
+        console.log(Object.assign(config1,config2));//config1被覆盖
+
+    </script>
+</body>
+</html>

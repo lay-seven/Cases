@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Girlfriend(names, ages,height) {
+            this.name = names;
+            this.age = ages;
+            this.height = height;
+            this.sayLove = function () {
+                console.log('I love you!');
+            }
+        }
+
+        let girlfriend = new Girlfriend('女朋友','18','160');
+        console.log(girlfriend);
+        girlfriend.sayLove();
+    </script>
+</body>
+</html>

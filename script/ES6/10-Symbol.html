@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Symbol是ES6中引入的一种新的基本数据类型，用于表示一个独一无二的值。
+        // 它是JavaScript中的第七种数据类型，与undefined、null、Number（数值）、
+        // String（字符串）、Boolean（布尔值）、Object（对象）并列。
+
+        //使用Symbol函数可以生成一个Symbol类型的值，但是你不能在调用Symbol时使用
+        //new关键字，因为Symbol是基本数据类型，而不是对象。
+
+        const a = Symbol();
+        console.log(a);  //Symbol()
+
+        // 实际上，a变量拿到了内存中某块内存的唯一引用（这里所说的引用，其实就是
+        // 该内存的地址）。如果不借助a变量，你不可能再得到这个地址。
+
+        // Symbol属性的遍历
+        // 它可以被专门的Object.getOwnPropertySymbols()方法遍历出来。
+        // 该方法返回一个数组，包含了当前对象的所有用作属性名的Symbol值：
+        var s1 = Symbol('a');
+        var s2 = Symbol('b');
+
+        var b = {
+            name: "夕山雨",
+            [s1]: 24,
+            [s2]: function () { }
+        }
+
+        var s = Object.getOwnPropertySymbols(b); //[Symbol(a), Symbol(b)]
+        b[s[0]] = 24; //返回的数组元素不是字符串，而是实际的Symbol值，
+               //因此可以通过它引用到对象的该属性
+
+
+        // 迭代器
+        const west = ['唐僧','孙悟空','猪八戒','沙僧'];
+        let iterator = west[Symbol.iterator];
+        console.log(iterator); //ƒ values() { [native code] }
+
+        let iterator0 = west[Symbol.iterator]();
+        console.log(iterator0); // Array Iterator {}
+        console.log(iterator0.next());// {value: '唐僧', done: false}
+        console.log(iterator0.next());// {value: '孙悟空', done: false}
+        console.log(iterator0.next());// {value: '猪八戒', done: false}
+        console.log(iterator0.next());// {value: '沙僧', done: false}
+        console.log(iterator0.next());// {value: undefined, done: true}
+
+
+        // USONB
+        // U undefined
+        // S Symbol String
+        // O object
+        // N null
+        // B boolean
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示模式</title>
+    <style>
+        span {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .select {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* table{
+            margin: 0 auto;
+        } */
+        .table {
+            text-align: center;
+        }
+
+        textarea {
+            display: inline-block;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <br>
+    <div>
+        显示模式：块级、行内、行内块<br>
+
+    </div>
+    <div>
+        块级元素：<br>
+        1.独占一行<br>
+        2.宽度默认是父元素的宽度，高度由内容撑开<br>
+        3.可以设置宽高<br>
+        4.代表标签：div p h ul li dl dt dd form header<br>
+    </div>
+    <br><br>
+    <div>
+        行内元素：<br>
+        1.一行可以显示多个<br>
+        2.宽度和高度默认由内容撑开<br>
+        3.不可以设置宽高<br>
+        4.代表标签：a span b u i s strong ins em del...<br>
+    </div>
+    <span>
+        w300+h300,pink
+    </span>
+    <br><br>
+    <div>
+        行内块元素：<br>
+        1.一行可以显示多个<br>
+        2.可以设置宽高<br>
+        3.代表标签：input textarea button select...<br>
+        4.img有行内块特点，但chrome调试工具中显示inline<br>
+    </div>
+    <input class="select" type="text">
+    <textarea class="select" name="" id="" cols="30" rows="10"></textarea>
+    <button class="select">按钮</button>
+
+    <div class="table">
+        <!-- 显示模式的切换：<br> -->
+        <table border="1" width="400" height="300">
+            <caption>显示模式的切换</caption>
+            <thead>
+                <tr>
+                    <th>属性</th>
+                    <th>效果</th>
+                    <th>使用频率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display:block</td>
+                    <td>转换成块级元素</td>
+                    <td>较多</td>
+                </tr>
+                <tr>
+                    <td>display:inline-block</td>
+                    <td>转换成行内块元素</td>
+                    <td>较多</td>
+                </tr>
+                <tr>
+                    <td>display:inline</td>
+                    <td>转换成行内元素</td>
+                    <td>较少</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var span = document.querySelector('span');
+        console.log(span);
+        span.onclick = function() {
+            span.innerText = '我的第一个DOM操作';
+        }
+    </script>
+</body>
+
+</html>

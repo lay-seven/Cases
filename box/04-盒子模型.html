@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        body {
+            background-color: #000;
+
+        }
+
+        div {
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+        }
+
+        .box {
+
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            /* 边框线 纸箱子border */
+            border-top: 2px solid pink;
+            /* 内边距padding */
+            padding: 10px;
+            /* 外边距margin */
+            margin: 10px;
+
+        }
+
+        .box2 {
+
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 边框线 纸箱子border */
+            border-top: 2px solid pink;
+            /* 内边距padding:顺时针旋转上、右、下、左 */
+            /* 如果只有三个值，先确定上、右、下，并且左与右一致 */
+            /* 两个值：确定上、右，下与上一致，左与右一致 */
+            padding: 10px 20px 30px 40px;
+            /* 外边距margin */
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        1.盒子的概念<br>
+        (1)页面中的每一个标签，都可以看做是一个盒子，通过盒子的视角更方便的进行布局<br>
+        (2)浏览器在渲染网页时，会将网页中的元素看做是一个个的矩形区域，我们也形象的称之为盒子<br>
+        <br><br>
+        2.盒子模型<br>
+        css中规定每个盒子分别由：内容区域(content)、内边距区域(padding)、边框区域(border)、外边距区域(margin)构成，这就是盒子模型<br>
+    </div>
+    <br><br>
+
+    <!-- content -->
+    <div>
+        content：内容的宽度和高度<br>
+        作用：利用width和height设置盒子内容区域大小<br>
+        属性:width/height<br>
+        常见取值:数字+px<br>
+    </div>
+    <br><br>
+
+    <!-- 边框border -->
+    <div>
+        border:<br>
+        连写形式:取单个值的连写，取值之间以空格隔开<br>
+        <!-- solid:实线 dashed:虚线 dotted:点线  -->
+        如：border: 10px solid red;<br>
+        <!-- 只设置某个方向的边框 -->
+        属性名：boder-方位名(right/left/top/bottom)<br>
+        <!-- 拆分 -->
+        border-width border-style border-color<br>
+        快捷键：bd+tab;<br>
+    </div>
+    <br><br>
+
+    <!-- 内边距padding -->
+    <div>
+        padding属性可以当复合属性使用<br>
+        padding:
+    </div>
+    <br><br>
+
+    <!-- 外边距 -->
+    <div>
+        margin与padding写法一致<br>
+
+    </div>
+    <br><br>
+
+    <div class="box">体验盒子模型</div>
+    <div class="box2">体验盒子模型</div>
+</body>
+
+</html>

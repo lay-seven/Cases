@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.prototype.then</title>
+</head>
+<body>
+    
+    <script>
+        const p = new Promise((resolve,reject) => {
+            // setTimeout(() =>{ 
+                // resolve('用户数据');
+                reject('error');
+            // },0)
+        });
+        // 调用then方法
+        // 如果上访的promise状态为成功，则执行第一个回调函数，反之执行第二个
+        // const result = p.then(value =>{
+        //     console.log(value);
+        // },reason => {
+        //     console.warn(reason);
+        // });
+        // result.then(value => {
+        //     console.log('二次成功');
+        // },reason => {
+        //     console.log(二次失败);
+        // });
+
+        // 链式调用
+        p.then(value =>{
+            console.log(value);
+        },reason => {
+            console.warn(reason);
+            reject('error');
+        }).then(value => {
+            console.log('二次成功');
+        },reason => {
+            console.log('二次失败');
+        });
+
+        // then方法的返回值也是一个promise对象，状态由回调函数的执行结果决定
+        // 如果回调函数中返回的结果是一个非promise类型的属性，状态为成功，成功值为返回的结果
+        // 返回undefined也是非promise对象，状态也为成功
+        // 返回promise对象,promise的状态决定then方法成功与否
+        // console.log(result);
+    </script>
+</body>
+</html>

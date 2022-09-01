@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #fff;
+        }
+        .box{
+            display: inline-block;
+            background-color: green;
+            width: 380px;
+            height: 380px;
+            border: 10px solid #000;
+        }
+        .textbox{
+            box-sizing:border-box;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 10px solid blue;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 盒子尺寸=width/height+border -->
+        盒子模型：大小计算
+    </div>
+
+    <!-- 自动计算 -->
+    <div>
+        自动内减<br>
+        操作：给盒子设置属性box-sizing:border-box;即可<br>
+        优点：浏览器自动计算多余大小，自动在内容中减去;<br>
+    </div>
+    <div class="textbox">
+        测试盒子
+    </div>
+</body>
+</html>

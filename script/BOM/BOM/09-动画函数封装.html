@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="one">移300</button>
+    <button class="two">移动到500</button>
+    <br><br><br><br>
+    <div class="move"></div>
+    <script>
+        // 实现原理 通过定时器 setInterval() 不断移动盒子位置。
+        // 实现步骤：
+        // 1. 获得盒子当前位置
+        // 2. 让盒子在当前位置加上1个移动距离
+        // 3. 利用定时器不断重复这个操作
+        // 4. 加一个结束定时器的条件
+        // 5. 注意此元素需要添加定位，才能使用element.style.left
+        var move = document.querySelector('.move');
+        var one = document.querySelector('.one');
+        var two = document.querySelector('.two');
+        var ol = move.offsetLeft;
+        var ot = move.offsetTop;
+        // console.log(ol); //0;
+        // var timer = setInterval(box,50)
+        // function box() {
+        //     if(move.offsetLeft >= 500) {
+        //         clearInterval(timer);
+        //     }
+        //     move.style.left = move.offsetLeft + 1 +'px';
+        // }
+
+        one.addEventListener('click', function () {
+            animate(move, 300,function() {
+                move.style.backgroundColor = 'skyblue';
+            });
+        });
+        two.addEventListener('click', function () {
+            animate(move, 500,function() {
+                move.style.backgroundColor = 'pink';
+            })
+        });
+        // 函数封装
+        function animate(obj, target ,callback) {
+            clearInterval(obj.timer);//清除以前的定时器
+            obj.timer = setInterval(function () {
+                var step = (target - obj.offsetLeft) / 10;//缓动
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    if(callback) {
+                        callback();
+                    }
+                }
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 10);
+        }
+    </script>
+</body>
+
+</html>

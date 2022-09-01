@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        
+        <school></school>
+        <hr>
+        <student></student>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//取消生产提示
+
+    const school = Vue.extend({
+
+        template: `
+              <div>
+              <h2>学校名称:{{ schoolName }}</h2>
+              <h2>学校地址:{{ schoolAddress }}</h2>
+              <button @click="showName">点我提示学校名</button>
+              </div>
+            `,
+
+        data() {
+            return {
+                schoolName: '尚硅谷',
+                schoolAddress: '深圳'
+            }
+        },
+        methods:{
+            showName() {
+                alert('尚硅谷')
+            }
+        }
+    })
+
+    const student = Vue.extend({
+
+        template: `
+            <div>
+              <h2>学生名字:{{ studentName }}</h2>
+              <h2>学生年龄:{{ age }}</h2>
+            </div>
+        `,
+
+        data() {
+            return {
+                studentName: '尚硅谷',
+                age: '18'
+            }
+        }
+    })
+
+    new Vue({
+        el:'#root',
+        // 第二部 局部注册组件
+        components:{
+            school:school,
+            student:student,
+        },
+        methods:{
+
+        }
+    })
+</script>
+
+</html>

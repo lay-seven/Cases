@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 默认绑定 以函数形式调用时，this是window(严格模式中为undefined)
+        function girl() {
+            console.log(this);
+        }
+        girl();// window
+
+        // 以方法的形式调用时，this是调用方法的对象:隐式绑定
+        var girl = {
+            name: '小红',
+            height: 160,
+            weight: 90,
+            detail: function () {
+                console.log('姓名: ' + this.name);
+                console.log('身高: ' + this.height + '厘米');
+                console.log('体重: ' + this.weight + '斤');
+            }
+        }
+        girl.detail();
+
+        // 硬绑定 使用call和apply调用时，this是传入的那个指定对象
+
+        // 构造函数绑定  以构造函数的形式调用时，this是新创建的那个对象
+        function Lover(name) {
+            this.name = name;
+            this.sayName = function () {
+                console.log('我的老婆是' + this.name);
+            }
+        }
+        var love = new Lover('小红');
+        love.sayName();// 我的老婆是小红
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

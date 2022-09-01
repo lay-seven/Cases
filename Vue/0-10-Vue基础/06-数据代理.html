@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">javascript</div>
+
+
+
+</body>
+<script type="text/javascript">
+    let num = 20;
+    let person = {
+        name:'张三',
+        sex:'男'
+    }
+    Object.defineProperty(person,'age',{
+        // value:18,//此中定义的键值对不可枚举,只读，要改变需借助别的配置项
+        // enumerable:true ,// 可枚举
+        // writable:true, //是否只读，默认为false只读
+        // configurable:true, //是否可删除
+
+        // //当age被读取时，执行函数,返回值被设置为age的值
+        get:function(){
+            return num;
+        },
+        //当age被修改时，执行函数,且会收到修改的具体值
+        set(value){
+            num = value;
+            console.log('我被设置了');
+        }
+    })
+    // console.log(person);
+    // console.log(Object.keys(person));
+    // console.log(person.age);
+
+    Vue.config.productionTip = false;//取消生产提示
+
+    const vm = new Vue({
+        el:'#root',
+        data:{
+            name:'张三',
+            address:'深圳'
+
+            
+        }
+    })
+    console.log(vm);
+</script>
+
+</html>

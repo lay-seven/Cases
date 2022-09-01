@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 19px solid skyblue;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试内容测试</div>
+
+    <script>
+        // element.clientTop 上边框大小
+        // element.clientLeft 返回左边框的大小
+        // element.clientWidth 返回不包括margin的宽度 不包含单位
+        // element.clientHeight 返回不包括margin的高度
+        var div = document.querySelector('div');
+        console.log(div.clientLeft);
+
+        // element.scrollTop 返回被卷去的上侧距离，不含单位
+        // element.scrollLeft 返回被卷去的左侧距离
+        // element.scrollWidth 返回不含边框的实际宽度，包括被卷去的
+        // element.scrollHeight 返回实际高度
+        div.addEventListener('scroll',function() {
+            console.log(div.scrollTop);
+        })
+        console.log(div.clientTop);
+    </script>
+</body>
+</html>

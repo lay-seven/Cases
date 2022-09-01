@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+
+        /* 选中第一个li */
+        li:first-child{
+            color: red;
+        }
+
+        /* 选中最后一个li */
+        li:last-child{
+            color: green;
+        }
+
+        /* 选中第n个li：括号里想找谁写谁 */
+        /* -n+5:找到前五个 */
+        li:nth-child(-n+5){
+            background-color: pink;
+        }
+
+        /* 选中倒数第n个 */
+        li:nth-last-child(3){
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 结构伪类选择器 -->
+    <div>
+        1.目标:能够使用为类选择器在html的相关结构关系查找元素<br>
+        2.优势:减少对于HTML中类的依赖，有利于保持代码整洁<br>
+        3.场景:常用于查抄某父级选择器中的子元素<br>
+        语法：<br>
+        n的注意点：<br>
+        1. 0,1,2,3,4...<br>
+        2.通过n可以组成常见公式:(当填公式时，n从0开始)<br>
+        偶数：2n、even<br>
+        奇数：2n+1、2n-1、odd<br>
+        找到前五个：-n+5  <br>
+        找到从第五个往后：n+5   <br>
+
+        <table border="1" width="500" height="250">
+            <caption>选择器</caption>
+            <tr>
+                <th>选择器</th>
+                <th>说明</th>
+            </tr>
+            <tr>
+                <td>E:first-child{}</td>
+                <td>匹配父元素中第一个子元素，并且是E元素</td>
+            </tr>
+            <tr>
+                <td>E:last-child{}</td>
+                <td>匹配父元素中最后一个子元素，并且是E元素</td>
+            </tr>
+            <tr>
+                <td>E:nth-child(n){}</td>
+                <td>匹配父元素中第n个子元素，并且是E元素</td>
+            </tr>
+            <tr>
+                <td>E:nth-last-child(n){}</td>
+                <td>匹配父元素中倒数第n个子元素，并且是E元素</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!-- ul>li{这是第$个li} -->
+    <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+    </ul>
+
+</body>
+
+</html>

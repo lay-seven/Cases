@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div data-Time="20">
+
+    </div>
+
+    <script>
+        var div = document.querySelector('div');
+        console.log(div.getAttribute('data-Time'));
+        div.setAttribute('data-Times', 30);
+        console.log(div.getAttribute('data-Times'));
+        // 驼峰命名法
+        console.log(div.dataset.times);
+    </script>
+</body>
+
+</html>

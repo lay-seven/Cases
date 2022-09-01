@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- table    表格
+        caption   表格标题
+        tr        行
+        th        表头
+        td        单元格-->
+    <!--结构标签
+     thead
+     tbody
+     tfoot  -->
+    <table border="1" width="400" height="250">
+        <caption>表格</caption>
+        <thead>
+            <tr>
+                <th>张三</th>
+                <th>100</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>小姐姐</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>总结</td>
+                <td>真棒</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>郎才女貌</td>
+                <td>相亲成功</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- 合并单元格 rowspan  colspan -->
+    <table border="1" width="400" height="250">
+        <caption>表格</caption>
+
+        <tr>
+            <th>张三</th>
+            <th rowspan="2">100</th>
+        </tr>
+
+
+        <tr>
+            <td>小姐姐</td>
+            <!-- <td>100</td> -->
+        </tr>
+        <tr>
+            <td>总结</td>
+            <td>真棒</td>
+        </tr>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">郎才女貌 相亲成功</td>
+                <!-- <td>相亲成功</td> -->
+            </tr>
+        </tfoot>
+    </table>
+
+    <!--  -->
+</body>
+
+</html>

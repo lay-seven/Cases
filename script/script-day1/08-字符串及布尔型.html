@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字符串：用:'' ""引用的
+        //单双引号的嵌套：外双内单，外单内双
+        var str = "我是一个'双引号'嘿嘿";
+        console.log(str);
+
+        //字符串类型转义符,需要写到引号里面
+
+        //布尔型
+        var flag = true;//flag布尔型
+        var flag2=false;//flag布尔型
+        //参加运算时，true为1,false为0;
+        console.log(12+flag);//输出13
+        console.log(12+flag2);//输出12
+
+        //undefined与字符串参与运算，结果是字符串;与数字运算，得到NaN
+        console.log('12'+undefined);//输出12undefined
+        console.log(12+undefined);//输出NaN
+
+        //null 空值
+        var space = null;
+        console.log(space+'pink');//输出nullpink
+        console.log(12+space);//输出12
+    </script>
+</head>
+<body>
+    <!-- 转义符 -->
+    <div>
+        转义符都以\开头
+        <ul>
+            <li>\n:换行符，n是newline的意思</li>
+            <li>\\：斜杠\</li>
+            <li>\':单引号</li>
+            <li>\":双引号</li>
+            <li>\t:tab缩进</li>
+            <li>\b:空格，b是blank的意思</li>
+        </ul>
+    </div>
+</body>
+</html>

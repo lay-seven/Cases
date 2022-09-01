@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        姓：<input type="text" v-model='firstName'><br>
+        名：<input type="text" v-model='lastName'><br>
+        全名：<span>{{firstName}}-{{lastName}}</span>
+    </div>
+    <!--methods方法调用之后进行插值-->
+    <!--data中的数据发生变化的话，要重新解析和react类似，state一变化页面重新render-->
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//取消生产提示
+
+    new Vue({
+        el: '#root',
+        data: {
+            firstName: '张',
+            lastName: "三",
+        },
+        methods: {
+
+        },
+        computed: {
+
+        }
+    })
+</script>
+
+</html>

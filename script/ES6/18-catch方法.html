@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // 设置为失败
+                reject('出错啦')
+            },1000);
+        });
+        p.then(() => {},reason => {
+            console.error(reason);
+        })//出错啦
+        p.catch(reason => {
+            console.error(reason);
+        })//出错啦  语法糖
+    </script>
+</body>
+
+</html>

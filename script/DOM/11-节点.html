@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>li1</li>
+            <li>li2</li>
+            <li>li3</li>
+        </ul>
+    </div>
+
+    <script>
+        var ul = document.querySelector('ul');
+        console.log(ul);
+        console.log(ul.childNodes);
+        //console.log(ul.firstElementChild);// ie9
+        //console.log(ul.lastElementChild);//ie9
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length - 1]);
+
+    // 元素节点.parentNode 返回元素的父节点。
+    // 元素节点.parentElement 返回元素的父元素。
+    // 元素节点.childNodes 返回元素的一个子节点的数组（包含空白文本Text节点）。
+    // 元素节点.children 返回元素的一个子元素的集合（不包含空白文本Text节点）。
+    // 元素节点.firstChild 返回元素的第一个子节点（包含空白文本Text节点）。
+    // 元素节点.firstElementChild 返回元素的第一个子元素（不包含空白文本Text节点）。
+    // 元素节点.lastChild 返回元素的最后一个子节点（包含空白文本Text节点）。
+    // 元素节点.lastElementChild 返回元素的最后一个子元素（不包含空白文本Text节点）。
+    // 元素节点.previousSibling 返回某个元素紧接之前节点（包含空白文本Text节点）。
+    // 元素节点.previousElementSibling 返回指定元素的前一个兄弟元素（相同节点树层中的前一个元素节点）。
+    // 元素节点.nextSibling 返回某个元素紧接之后节点（包含空白文本Text节点）。
+    // 元素节点.nextElementSibling 返回指定元素的后一个兄弟元素（相同节点树层中的下一个元素节点）。
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Phone{
+            static size = '5.5inch';
+            //构造方法
+            constructor(brand,price) {
+                this.brand = brand;
+                this.price = price;
+            }
+            call() {
+                console.log('我可以打电话');
+            }
+        }
+        let Huawei = new Phone('华为',5999);
+        console.log(Huawei);//Phone {brand: '华为', price: 5999}
+        Huawei.call();//我可以打电话
+
+
+        //静态成员
+        console.log(Huawei.size);//undefined
+        console.log(Phone.size);//5.5inch
+    </script>
+</body>
+</html>

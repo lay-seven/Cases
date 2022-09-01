@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--input 可以通过type属性值的不同展示不同的效果 -->
+    <!-- placeholder 占位符，提示用户输入的内容 -->
+    <!-- 表单预标签 -->
+    <form action="">
+        <div>用户名&nbsp;<input type="text"></div><br />
+
+        <div>密&nbsp;&nbsp;码&nbsp;<input type="password" placeholder="密码"></div><br />
+
+        <div>单选框：<input type="radio"></div><br />
+
+        <div>多选框：<input type="checkbox"></div><br />
+
+        <div>上传文件<input type="file"></div><br />
+
+        <div><input type="text" placeholder="请输入账号"></div><br />
+
+        <div>性别：<input type="radio" name="gender">男
+            <input type="radio" name="gender" checked>女
+        </div><br />
+
+        <div><input type="checkbox" checked>我同意<a href="https://www.baidu.com">注册条款</a></div><br />
+
+        <div>上传文件<input type="file" multiple></div><br />
+
+        <div>重置按钮<input type="reset" value="不重置"></div><br />
+
+        <div>提交按钮<input type="submit"></div><br />
+
+        <div>按钮<input type="button" value="超级按钮"></div><br />
+
+        <div><button type="menu">标签按钮</button></div><br />
+    </form>
+    <br />
+    input:
+    radio:单选<br />
+    checkBox多选框<br />
+    file:文件选择<br />
+    submit:提交按钮<br />
+    reset:重置按钮<br />
+    button:普通按钮<br /><br /><br />
+    <!-- select 下拉菜单系列 -->
+    <select name="所在城市" id="城市">
+        <option value="上海">上海</option>
+        <option value="1">重庆</option>
+        <option value="1" selected>北京</option>
+        <option value="1">广州</option>
+        <option value="1">深圳</option>
+
+    </select><br />
+    <br />
+
+    <!-- 文本域 textarea cols rows -->
+    <textarea rows="30" cols="60">
+
+
+    </textarea>
+    <br />
+    <!-- lable标签 -->
+    <input type="radio" name="gender" id="gender"><label for="gender">男</label>
+    <label><input type="radio" name="gender">女</label>
+    <br /><br />
+
+
+    <br />
+</body>
+
+</html>

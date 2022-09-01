@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>今天天气很{{info}}</h1>
+        <button @click="showInfo">天气检测</button>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//取消生产提示
+
+    new Vue({
+        el:'#root',
+        data:{
+            isHot:true,
+        },
+        methods:{
+            showInfo() {
+                this.isHot = !this.isHot;
+            }
+        },
+        computed:{
+            info() {
+                return this.isHot ? '炎热' : '凉爽';
+            }
+        },
+        watch:{
+            isHot:{
+                immediate:true,
+                handler(newWeather,preWeather) {
+                    console.log(`newWeather:${newWeather},preWeather:${preWeather}`);
+                }
+            }
+        }
+    })
+</script>
+
+</html>

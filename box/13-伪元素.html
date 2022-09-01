@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            color: #fff;
+            margin: 30px auto;
+        }
+        .father::before{
+            color: green;
+            content: '老鼠';
+        }
+        .father::after{
+            color: blue;
+            content: '大米';
+        }
+    </style>
+</head>
+<body>
+    <div>
+        一般页面中的非主体内容可以使用伪元素<br>
+        区别：<br>
+        1.元素：HTML设置的标签<br>
+        2.伪元素：由css模拟出的效果<br>
+        种类：<br>
+        ::before  在父元素内容最前添加一个伪元素<br>
+        ::after   在父元素内容的最后添加一个伪元素<br>
+        注意点：<br>
+        1.必须设置content属性才能生效<br>
+        2.伪元素默认是行内元素<br>
+    </div>
+
+    <div class="father">爱</div>
+</body>
+</html>

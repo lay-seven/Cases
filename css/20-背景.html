@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        div.images {
+            width: 400px;
+            height: 400px;
+            background-image: url(../images/cute.jpg);
+        }
+        .repeat{
+            width: 500px;
+            height: 500px;
+            background-image: url(../images/cute.jpg);
+            background-repeat: repeat-y;
+            
+        }
+        .position{
+            width: 300px;
+            height: 300px;
+            background-image: url(../images/sad.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .total{
+            background: pink url(../images/sad.jpg) no-repeat bottom center ;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 背景颜色 -->
+    <div>
+        测试div标签
+    </div>
+
+    <!-- 背景图片 -->
+    <div class="images">
+        background-image(bgi)
+    </div>
+
+    <!-- 背景平铺 -->
+    <div class="repeat">
+        background-repeat(bgr)<br>
+        取值：
+        repeat:(默认值)水平和垂直方向都平铺<br>
+        no-repeat:不平铺<br>
+        repeat-x:水平平铺<br>
+        repeat-y:垂直平铺<br>
+    </div>
+
+    <!-- 背景位置 -->
+    <div class="position">
+        
+        background-position(bgp)<br>
+        background-position:水平方向位置 垂直方向位置<br>
+        1方位名词，最多表示九个位置<br>
+        2.数字+px（坐标）原点在左上角，y轴向下<br>
+        <!-- 如果取负数则向正数的反方向移动 -->
+    </div>
+
+    <!-- 背景相关属性连写 -->
+    <div class="total">
+        书写顺序：backgruond:color image repeat position<br>
+        可以按需求省略<br>
+        在pc端，如果盒子大小和背景图片大小一样，此时可直接写backgruond: url()<br>
+        注意点：如果要设置单独的样式，<br>
+        要么把单独的样式写在连写下面<br>
+        要么写在连写的里面<br>
+
+    </div>
+    <!-- img用于实现网页中重要的图片 -->
+    <!--  -->
+</body>
+
+</html>

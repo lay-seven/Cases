@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="send">点击发送</button>
+    <button class="cancle">取消请求</button>
+
+
+    <script>
+        let x = null;
+        const btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            x = new XMLHttpRequest();
+            x.open('GET', 'http://127.0.0.1:8000/delay');
+            x.send();
+
+        }
+        btns[1].onclick = function () {
+            x.abort();
+        }
+    </script>
+</body>
+
+</html>

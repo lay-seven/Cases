@@ -1,0 +1,235 @@
+/* 用来美化首页的 */
+
+/* 浮动/display；盒子模型；文字样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 內减模式 */
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table; 
+  }
+.clearfix:after {
+    clear:both;
+}
+body {
+    background-color: #f3f5f7;
+}
+
+/* 版心 */
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.header{
+    height: 42px;
+    /* background-color: pink; */
+    margin: 30px auto;
+    
+}
+h1{
+    float: left;
+}
+
+/* 导航 */
+.nav{
+    float: left;
+    margin-left: 70px;
+    height: 42px;
+
+    /* background-color: green; */
+}
+
+.nav li{
+    float: left;
+    margin-right: 26px;
+    
+}
+
+.nav li a{
+    display: block;
+    padding: 0 9px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+    
+}
+.nav li a:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+
+/* 搜索 */
+.search{
+    float: left;
+    margin-left: 59px;
+    margin-top: 1px;
+    width: 412px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+}
+.search input{
+    width: 360px;
+    height: 38px;
+    margin: 0;
+    border: 0;
+    padding-left: 20px;
+    color: #bfbfbf;
+}
+
+/* 控制placeholder的样式 */
+.search input::placeholder{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+.search button{
+    float: right;
+    margin-bottom: 1px;
+    width: 50px;
+    height: 40px;
+    background-image: url(../images/btn.png);
+    border: 0;
+}
+
+/* 用户 */
+.user{
+    float: right;
+    margin-right: 35px;
+    /* background-color: skyblue; */
+    height: 42px;
+    line-height: 42px;
+}
+.user img{
+    /* 调节图片垂直方向对齐方式 */
+    vertical-align: middle;
+}
+
+/* 轮播图区域 */
+.banner{
+    height: 420px;
+	background-color: #1c036c;
+}
+.banner .wrapper{
+    height: 420px;
+    background-image: url(../images/banner2.png);
+}
+.banner .left{
+    float: left;
+    padding: 15px 20px;
+    width: 190px;
+	height: 420px;
+	background-color: #000;
+	/* opacity: 0.3; */
+    line-height: 44px;
+}
+.banner .left a{
+    
+    color: #ffffff;
+    font-size: 14px;
+}
+.banner .left a:hover{
+    color: #00b4ff;
+}
+.banner .arrow{
+    float: right;
+}
+
+.banner .right{
+    float: right;
+    width: 228px;
+	height: 300px;
+    margin-top: 50px;
+	background-color: #ffffff;
+}
+
+.banner .right h2{
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+.banner .right .content{
+    padding: 0 18px;
+}
+.banner .right dl{
+    padding: 12px 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.banner .right .content dt{
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.banner .right .content dd{
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.banner .right .more {
+    display: block;
+    margin: 4px auto 11px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+}
+.banner .right .more a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #00a4ff;
+    line-height: 38px;
+}
+
+/* 精品推荐.goods */
+.goods{
+    margin-top: 8px;
+    padding-left: 34px;
+    padding-right: 26px;
+    width: 1200px;
+	height: 60px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+    line-height: 60px;
+}
+
+.goods h2{
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #00a4ff;
+}
+.goods ul{
+    float: left;
+    margin-left: 30px;
+}
+.goods ul li{
+    float: left;
+}
+.goods li a{
+    border-left: 1px solid #bfbfbf;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #050505;
+}
+.goods .xingqu{
+    float: right;
+    font-size: 14px;
+    color: #00a4ff;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //let fn = v => v;
+        //等价于
+        let fn = function (num) {
+            return num;
+        }
+        fn(100);  // 输出100
+
+        // 带参数写法
+        let fn2 = (num1, num2) => {
+            let result = num1 + num2;
+            return result;
+        }
+        fn2(3, 2);  // 输出5
+
+        //1. this是静态的
+        // 箭头函数体中的 this 对象，是定义函数时的对象，而不是使用函数时的对象。
+        //在函数定义的时候就已经决定了
+        function getName() {
+            console.log(this.name);
+        }
+        let getName2 = () => {
+            console.log(this.name);
+        }
+        window.name = `尚硅谷`;
+        const school = {
+            name: `硅谷`,
+
+        }
+
+        // getName(); // 尚硅谷
+        // getName.call(school);// 硅谷
+
+        // getName2(); // 尚硅谷
+        // getName2.call(school); // 尚硅谷
+
+        // 箭头函数不能作为构造函数
+        // 不能使用arguments
+        // let fn3 = () => {
+        //     console.log(arguments);
+        // }
+        // fn3(1,2,3);// arguments is not defined
+
+        // 箭头函数的简写
+        // 1.当形参有且只有一个时省略括号
+        // 2.当函数体只有一条语句时省略花括号，此时return必须一并省去
+        let fn4 = n => n + n;
+        console.log(fn4(2)); // 4
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table {
+            text-align: center;
+        }
+
+        .position {
+            position: relative;
+            left: 100px;
+            bottom: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+        }
+
+        .absolute {
+            position: relative;
+            left: 0;
+            right: 0;
+        }
+
+        .absolute-box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .center {
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+        .transform{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            
+
+            /* 位移：往右，上（对应符号）位移自身宽高的一半 */
+            transform: translate(50%,-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        定位：<br>
+        1.标准流<br>
+        2.浮动<br>
+        3.定位:position<br>
+        常见属性值:static:静态<br>
+        relative:相对定位 absolute:绝对定位 fixed:固定定位
+
+    </div>
+
+    <!-- 属性表 -->
+    <div class="table">
+        <table border="1" width="500" height="250">
+            <caption>定位</caption>
+            <tr>
+                <th>方向</th>
+                <th>属性名</th>
+                <th>属性值</th>
+                <th>含义</th>
+            </tr>
+            <tr>
+                <td>水平</td>
+                <td>left</td>
+                <td>数字+px</td>
+                <td>距离左边的距离</td>
+            </tr>
+            <tr>
+                <td>水平</td>
+                <td>right</td>
+                <td>数字+px</td>
+                <td>距离右边的距离</td>
+            </tr>
+            <tr>
+                <td>垂直</td>
+                <td>top</td>
+                <td>数字+px</td>
+                <td>距离上边的距离</td>
+            </tr>
+            <tr>
+                <td>垂直</td>
+                <td>bottom</td>
+                <td>数字+px</td>
+                <td>距离下边的距离</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 相对定位:以left和top为尊 -->
+    <div class="relative">
+        <div>
+            定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试
+        </div>
+        <div class="position">
+            特点：<br>
+            1.移动前的位置不会被别的元素占据;<br>
+            2.不会改变元素的显示模式<br>
+            3.改变位置参照自己原来的位置<br>
+
+        </div>
+        <div>
+            定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试
+        </div>
+    </div>
+    <br><br><br>
+
+    <!-- 绝对定位：先找已经定位的父级，如果有就以这个父级为参照物进行定位 -->
+    <!-- 有父级但父级没有定位，以浏览器窗口左上角为参照定位 -->
+    <!-- 子绝父相 -->
+    <div class="absolute">
+        <div>
+            定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试
+        </div>
+        <div class="absolute-box">
+            特点：<br>
+            1.脱标，不占位置<br>
+            2.改变标签的显示模式特点:行内块<br>
+            3.配合方向属性实现移动，默认相对于浏览器可视区域移动<br>
+        </div>
+        <div>
+            定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试定位测试
+        </div>
+    </div>
+    <!--  绝对定位下的盒子居中 -->
+    <!-- 标准流居中：margin:auto -->
+    <div class="center">
+    </div>
+
+    <!-- 定位:绝对定位居中 -->
+    <div class="transform">
+        绝对定位居中1111111111
+    </div>
+    <br><br><br><br>
+
+    <!-- 固定定位 -->
+    <div>
+        相对于浏览器进行定位移动；<br>
+        position:fixed<br>
+        特点：<br>
+        1.需要配合方位属性进行移动；<br>
+        2.相对于浏览器的可视区域移动；<br>
+        3.脱标，在页面中已不占位置；<br>
+        4.具备行内块特点
+    </div>
+</body>
+

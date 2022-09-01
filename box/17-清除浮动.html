@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清楚浮动</title>
+    <style>
+        .top {
+            width: 1000px;
+            /* height: 300px; */
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .bottom {
+            height: 100px;
+            background-color: green;
+            margin: 0 auto;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            /* 清楚左右两侧浮动的影响 */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- 子元素设置浮动，父元素当其不存在,如果父元素没有设置高度，不会被浮动子元素撑开 -->
+        如果子元素浮动了，此时子元素不能撑开标准流的块级父元素<br>
+        原因：子元素浮动后脱标，不占位置<br>
+    </div>
+
+    <!-- 解决方法 -->
+    1.直接设置父元素高度<br>
+    2.额外标签法:在父元素内容的最后加一个块标签，设置 clear:both;<br>
+    缺点：添加额外元素，让页面更复杂<br>
+    3.单伪元素清除法<br>
+    <br>
+    clearfix::after{<br>
+    +content:'';<br>
+    display:block;<br>
+    clear:both;<br>
+    height:0;<br>
+    visibility:hidden;<br>
+    }<br>
+    4.双伪元素清除法：<br>
+     .clearfix::before,<br><!--解决外边距塌陷问题 -->
+    .clearfix::after{<br>
+        content:'';<br>
+        display:table;<br>
+    }<br>
+    .clearfix::after{<br>
+        clear:both;<br> <!--真正清除浮动的标签 -->
+    }<br>
+
+    5.给父元素设置overflow:hidden;<br>
+
+    <div class="top clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="bottom"></div>
+</body>
+
+</html>

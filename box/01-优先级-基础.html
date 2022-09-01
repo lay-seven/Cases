@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id{
+            color: brown;
+        }
+        .class{
+            color: yellow !important;
+        }
+        div{
+            color: blue;
+        }
+        body{
+            background-color: #000;
+            color: red;
+        }
+        /* 不要给继承添加!important */
+    </style>
+</head>
+<body>
+    <div class="class" id="id" style="color: pink;">
+        优先级：不同选择器具有不同优先级，优先级高的选择器样式会覆盖优先级低的<br>
+        公式：<br>
+        谁更精准谁优先级更高<br>
+        继承< 通配符选择器< 标签选择器< 类选择器< id选择器< 行内样式< !important<br>
+        注意：<br>
+        1.!important写在属性值后面，分号前面<br>
+        2.!important不能提升继承的优先级<br>
+        3.实际开发中不建议使用!important
+    </div>
+</body>
+</html>
+ 

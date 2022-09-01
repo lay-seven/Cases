@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .two{
+            /* visibility: hidden; */
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        元素隐藏：<br>
+        1.visibility:hidden:<br>
+          只是不可见，元素仍在原地占位<br>
+        2.display:none:<br>
+        不仅不可见，元素也相当于不存在，不占位<br>
+        3.opacity:透明度，并且会传染给全体子元素<br>
+    </div>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+</html>

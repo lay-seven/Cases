@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    
+</head>
+<body>
+    <button>我是按钮</button>
+    <input type="text" value="请输入内容">
+
+
+    <script>
+        // 通过ID获取元素
+
+        // 事件三要素：
+        // 1.事件源 2.事件类型 3.事件处理程序
+
+        // 获取元素
+        var btn = document.querySelector('button');
+        var ipt = document.querySelector('input');
+
+        // 注册事件
+        btn.onclick = function() {
+            // var flag = 0;
+            ipt.value = '您点击了按钮';
+            // disabled 禁用
+            this.disabled = true ;
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <!-- <h1>欢迎来到{{name}}学习</h1> -->
+        <school></school>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+
+    // function Demo() {
+    //     this.a = 1;
+    //     this.b = 2;
+    // }
+    // const d = new Demo();
+    //  console.log(Demo.prototype);// 显式原型
+    //  console.log(d.__proto__);//隐式原型
+    //  console.log(Demo.prototype === d.__proto__);//true
+
+    const school = Vue.extend({
+        template: `
+            <div>
+              <h2>学校名称:{{ schoolName }}</h2>
+              <h2>学校地址:{{ add }}</h2>
+              
+            </div>
+        `,
+        name: 'school',
+        data() {
+            return {
+                schoolName: '尚硅谷',
+                add: '深圳'
+            }
+        },
+    })
+
+    
+
+
+    Vue.config.productionTip = false;//取消生产提示
+
+    new Vue({
+        el: '#root',
+        data: {
+            name: '尚硅谷',
+        },
+        methods: {
+
+        },
+        components:{school}
+    })
+    console.log(school.prototype.__proto__);
+    console.log(school.prototype.__proto__ === Vue.prototype);
+</script>
+
+</html>

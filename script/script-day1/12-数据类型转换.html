@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //转换为字符串
+        var num = 1;
+        var a = '4';
+        var b = a - num;
+        console.log(b); // 3
+        //变量.toString()
+        console.log(num.toString());//输出1
+        //String(变量)
+        console.log(String(num));//输出1
+
+        //var age = prompt('请输入你的年龄');
+        //console.log(age);//输出输入的年龄：字符串型
+        //console.log(parseInt(age));//输出输入的年龄：数字型
+        //console.log(parseInt('120px'));输出120
+        //console.log(parseInt('rem120px'));输出NaN
+
+    </script>
+</head>
+
+<body>
+    <!-- 转换为字符型 -->
+    <div>
+        转换为字符串型<br>
+        <ul>
+            <li>toString():转成字符串</li>
+            <li>String():强制转换</li>
+            <li>加号拼接字符串：隐式转换</li>
+        </ul>
+    </div>
+    <br>
+
+    <!-- 转换为数字型 -->
+    <div>
+        转换为数字型<br>
+        <ul>
+            <li>parseInt(string):将string类型转换为整数数值型</li>
+            <li>parseFloat(string):将string类型转换为浮点数数值型</li>
+            <li>Number():强制转换函数，转换为数值型</li>
+            <li>js隐式转换(- * /):利用算术运算隐式转换为数值型</li>
+        </ul>
+    </div>
+
+    <!-- 转换为布尔型 -->
+    <div>
+        Boolean()函数，将其他类型转换为布尔型<br>
+        代表“空”、否定的值会被转换为false，如 '' 0 NaN null undefined<br>
+        其余值会转换为true;
+    </div>
+</body>
+
+</html>

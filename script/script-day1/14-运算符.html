@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //算数运算符
+        console.log(1 + 1);//输出2
+        console.log(6 % 5);//输出1
+        //不能直接拿浮点数比较
+        console.log(0.1 + 0.2);//0.30000000000000004
+
+        //表达式和返回值
+        //递增
+        // var num = 0, num2 = 0;
+        // console.log(++num);//先自加1.后返回值
+        // console.log(num2++ + 10);//输出10:先返回原值，再自加1
+        // console.log(num2);//1
+        // console.log(3 || 0);//3
+        // console.log(3 && 0);//0
+        // console.log(!1);//false 逻辑与短路运算：左边表达式的值可以确定，则不
+        //再执行右边的运算
+        //如果表达式1结果为真，则返回表达式二，反之返回表达式1
+        //
+        //&&:找真运算  ||：找假运算
+        var num = prompt('请输入自然数');
+        console.log(num >= 10 ? num : '0' + num);
+        for (var i = 0; i < 100; i++) {
+            console.log('你好');
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        %:取余运算<br>
+    </div>
+    <div>
+        表达式：由数字、运算符、变量等组成的式子<br>
+
+    </div>
+    <div>
+        递增递减运算符<br>
+        前置递增运算符++num;--num<br>
+        后置递增运算符num++;num--<br>
+        必须和变量配合使用<br>
+        后置自增先返回原值，后自加1<br>
+    </div>
+    <div>
+        比较运算符（关系运算符）<br>
+        返回一个布尔值<br>
+        >=:大于等于 <=：小于等于<br>
+            ==:等于运算符<br> !=:不等于<br>
+            ==会把字符串型数据转换为数值型进行比较<br>
+            === !==:全等，要求值和数据类型都一致<br>
+    </div>
+    <div>
+        运算符优先级<br>
+        <ul>
+            <li>()</li>
+            <li>一元运算符</li>
+            <li>算数运算符：先乘除取余，后加减</li>
+            <li>关系运算符>< < /li>
+            <li>相等运算符</li>
+            <li>逻辑运算符:先&&后||</li>
+            <li>赋值运算符=</li>
+            <li>逗号运算符,</li>
+        </ul>
+    </div>
+</body>
+
+</html>

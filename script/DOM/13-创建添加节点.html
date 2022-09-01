@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>li 1</li>
+    </ul>
+
+
+    <script>
+        // 创建并添加元素节点 node.appendChild 末尾追加元素 
+        //node.insertBefore(child,指定元素) 在指定元素后追加节点
+        var li = document.createElement('li');
+        var ul = document.querySelector('ul');
+        ul.appendChild(li);
+        var lili = document.createElement('li');
+        ul.insertBefore(lili,ul.children[0]);
+
+        // document.write 文档流执行完毕后调用，会导致页面全部重绘
+
+        // innerHTML 将内容写入某个DOM节点，不会导致重绘，
+        // 创建多个元素效率更高（数组形式）
+
+        // createWElement 效率比innerHTML稍低
+    </script>
+</body>
+</html>

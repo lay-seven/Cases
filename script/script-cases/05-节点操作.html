@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        li {
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+
+
+    <script>
+        var txta = document.querySelector('textarea');
+        var button = getNextElementSibling(txta);
+        var ul = getNextElementSibling(button);
+        
+        
+        
+        button.onclick = function () {
+            var text = txta.value;
+            console.log(text);
+            if (txta.value !== '') {
+                var li = document.createElement('li');
+                li.innerText = text;
+                txta.value = '';
+                ul.appendChild(li);
+                // ul.insertBefore(li, ul.children[0]);
+            }
+        }
+
+        function getNextElementSibling(element) {
+            var el = element;
+            while (el = el.nextSibling) {
+                if (el.nodeType === 1) {
+                    return el;
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="input">
+    </form>
+    <script>
+        var input = document.querySelector('#input');
+
+        // 表单事件
+        // onchange
+        input.addEventListener('change', fn);
+        function fn() {
+            // console.log(this.value);
+        }
+
+        // oninput
+        input.addEventListener('input', fn2);
+        function fn2() {
+            console.log(this.value);
+        }
+
+        // onselect
+        input.addEventListener('select', fn3);
+        function fn3() {
+            console.log('Selected');
+        }
+
+        // 键盘事件
+        // onkeydown
+        window.onkeydown = function (event) {
+            event = window.event;
+            // console.log(event.keyCode);
+            event.keyCode === 65 ? console.log('true') : console.log('false');;
+        }
+        setTimeout(fn4,1000);
+        function fn4() {
+            confirm('延时触发');
+        }
+        setInterval(fn5,1000);
+        var i = {
+            value : 0
+        };
+        function fn5() {
+            i.value++;
+            console.log(i.value);
+        }
+    </script>
+</body>
+
+</html>

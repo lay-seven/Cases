@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 检测是否为数组
+        // 1. instanceof 运算符
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);// true
+        console.log(obj instanceof Array);// false
+        // 2.Array.isArray
+        console.log(Array.isArray(arr));// true
+
+        // 数组末尾增加元素,返回新数组长度
+        arr.push('唐僧');
+        console.log(arr[0]);
+        // unshift()数组开头添加元素，并返回新数组的长度
+        arr.unshift('孙悟空');
+        console.log(arr[0]);// 孙悟空 
+        // 数组末尾删除元素,并返回被删除的值
+        console.log(arr.pop());//唐僧
+        // shift()删除数组开头的第一个元素，并返回被删除的值
+
+        //  reverse()方法演示：该方法用来反转数组（前边的去后边，后边的去
+        // 前边），该方法会直接修改原数组
+        var arr1 = ["孙悟空", "猪八戒", "沙和尚","孙悟空"];
+        // arr1.reverse();
+        // console.log(arr1);
+
+        // 查找第一个指定数组元素索引号 如果不存在，则返回-1
+        console.log(arr1.indexOf('孙悟空'));//0
+        // 查找数组最后一个指定元素的索引号  如果不存在，则返回-1
+        console.log(arr1.lastIndexOf('孙悟空'));//3
+
+        // 根据位置返回字符
+        // 1.charAt(index)
+        var str = 'andy';
+        console.log(str.charAt(3));// y
+        console.log(str.charCodeAt(3));// 121
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

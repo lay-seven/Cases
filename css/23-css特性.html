@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: red;
+            font-size: 20px;
+        }
+
+        a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        一、继承性<br>
+        特性：子元素有默认继承父元素样式的特点<br>
+        可以继承的常见属性（文字控制属性都可以继承）<br>
+        不是控制文字的都不能继承<br>
+
+        <p>
+            1.color<br>
+            2.font-style font-weight font-size font-family<br>
+            3.text-indent text-align<br>
+            4.line-height<br>
+            5...br
+            6.继承失效的特殊情况：<br>
+            (1)a标签的color会继承失效<br>
+            <a href="#">超链接颜色属性继承失效</a><br>
+            (2)h系列标签的font-size会继承失效<br>
+        <h1>h系列字体大小继承失效</h1>
+        </p>
+    </div>
+    <!--  -->
+    <div>
+        二、层叠性<br>
+        1.给同一个标签设置不同的样式，此时样式会层层叠加，共同作用在标签上<br>
+        2.设置相同的样式，此时样式会层层覆盖，最终写在最后的样式会生效<br>
+        3.当样式冲突时，只有当选择器优先级相同，才能通过层叠性哦啊不断结果<br>
+
+    </div>
+</body>
+
+</html>

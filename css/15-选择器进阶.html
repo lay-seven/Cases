@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .important {
+            color: red;
+        }
+        /* 找到div的儿子p设置样式 */
+        div p{
+            color: aqua;
+        }
+        div>h2{
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 复合选择器： -->
+    <div>后代选择器：空格<br>
+        根据HTML标签的嵌套关系，选择父元素后代中满足条件的元素<br>
+        语法：<div class="important">选择器1 选择器2{css};</div>
+        结果：在选择器1的后代中，找到满足选择器2的标签，设置样式。<br>
+        注意点：后代包括儿子、孙子、重孙。。。<br>
+        选择器与选择器之间通过空格隔开
+    </div>
+    <p>这是一个p标签</p>
+    <div>
+        <h2>
+            这是div的儿子p
+            <p>这是div的孙子，p的儿子</p>
+        </h2>
+    </div>
+
+    <!--  -->
+    <div>
+        子代选择器：><br>
+        根据HTML标签的嵌套关系，选择父元素子代中满足条件的元素<br>
+        选择器语法：<span class="important">选择器1>选择器2{css}</span><br>
+        结果：在选择器1的子代中，找到满足选择器2的标签，设置样式。<br>
+        注意点：子代只包括儿子<br>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        #root {
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+		收集表单数据：
+			若：<input type="text"/>，则v-model收集的是value值，用户输入的就是value值。
+			若：<input type="radio"/>，则v-model收集的是value值，且要给标签配置value值。
+			若：<input type="checkbox"/>
+				1.没有配置input的value属性，那么收集的就是checked（勾选 or 未勾选，是布尔值）
+				2.配置input的value属性:
+					(1)v-model的初始值是非数组，那么收集的就是checked（勾选 or 未勾选，是布尔值）
+					(2)v-model的初始值是数组，那么收集的的就是value组成的数组
+			备注：v-model的三个修饰符：
+				?：失去焦点再收集数据
+				?：输入字符串转为有效的数字
+				?：输入首尾空格过滤
+		-->
+    <div id="root">
+        <label for="user">账号：</label>
+        <input type="text" placeholder="请输入账号" id="user" v-model="account"><br><br>
+        <label for="password">密码：</label>
+        <input type="password" placeholder="请输入密码" id="password" v-model="password"><br><br>
+        性别：
+        <label for="man">男</label><input type="radio" name="gender" id="man"> 
+        <label for="female">女</label><input type="radio" name="gender" id="female"><br><br>
+        爱好：
+        学习<input type="checkbox" v-model="hobby" value="study">
+        打游戏<input type="checkbox" v-model="hobby" value="game">
+        吃饭<input type="checkbox" v-model="hobby" value="eat"><br><br>
+        所属校区
+        <select name="" id="">
+            <option value="">请选择校区</option>
+            <option value="">北京</option>
+            <option value="">上海</option>
+            <option value="">深圳</option>
+            
+        </select><br><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br><br>
+        <input type="checkbox">我已阅读并同意<a href="#">用户协议</a><br><br>
+        <button>提交</button>
+    </div>
+
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;//取消生产提示
+
+    new Vue({
+        el:'#root',
+        data:{
+            account:'',
+            password:'',
+            gender:'',
+            hobby:[],
+        },
+        methods:{
+
+        }
+    })
+</script>
+
+</html>
