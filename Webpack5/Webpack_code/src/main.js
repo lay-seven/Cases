@@ -4,5 +4,5 @@ import sum from './js/sum';
 import './css/index.css';
 import "./less/index.less"
 
-console.log(count(9,7));
+console.log(count(9, 7));
 console.log(sum(9,7));

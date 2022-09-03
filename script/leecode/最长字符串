@@ -1,0 +1,19 @@
+var lengthOfLongestSubstring = function(s) {
+    let occ = new Set();
+    let n = s.length;
+    let right = -1, ans = 0;
+    for (let i = 0; i < n; i++) {
+        if (i) {
+            occ.delete(s.charAt(i-1));
+        }
+        while (right + 1 < n && !occ.has(s.charAt(right + 1))) {
+            occ.add(s.charAt(right + 1), right + 1);
+            ++right;
+        }
+        ans = Math.max(ans, right - i + 1);
+
+    }
+    return ans;
+};
+
+console.log(lengthOfLongestSubstring('sdadsjidiuhyfvouthgbhrttutyf'));

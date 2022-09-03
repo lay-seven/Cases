@@ -6,3 +6,13 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  color: red;
+  font-size: 50px;
+}
