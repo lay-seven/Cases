@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var findMedianSortedArrays = function (nums1, nums2) {
+            let arrSet = [...nums1, ...nums2]
+            let arr = Array.from(arrSet)
+            arr.sort((a, b) => b - a)
+            console.log(arr);
+            let flag = arr.length
+            if (flag % 2) {
+                return arr[(flag - 1) / 2]
+            } else {
+                return (arr[flag / 2 - 1] + arr[flag / 2]) / 2
+            }
+        };
+
+        let arr1 = [3, 2, 1], arr2 = [4, 5, 6]
+
+        let result = findMedianSortedArrays(arr1, arr2)
+        // let arr = [...arr1, ...arr2]
+
+        // console.log(arr);
+        // console.log(arr.length);
+
+        console.log(result);
+    </script>
+</body>
+
+</html>
