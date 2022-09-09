@@ -25,7 +25,7 @@
             timeout: 2000
         });
 
-        const onather = axios.create({
+        const another = axios.create({
             baseURL: 'https://b.com',
             timeout: 2000
         });
@@ -35,10 +35,15 @@
         // }).then(response => {
         //     console.log(response);
         // });
-
-        duanzi.get('/getJoke').then(response => {
-            console.log(response.data)
+        duanzi({
+            url:'/getJoke',
+        }).then(response=>{
+            console.log(response);
         })
+
+        // duanzi.get('/getJoke').then(response => {
+        //     console.log(response.data)
+        // })
     </script>
 </body>
 

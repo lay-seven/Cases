@@ -14,6 +14,7 @@
             console.log('请求拦截器 成功 - 1号');
             //修改 config 中的参数
             config.params = {a:100};
+            config.params.b = 100;
 
             return config;
         }, function (error) {
