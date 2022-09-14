@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发送阿贾克斯</title>
+</head>
+
+<body>
+    <button>点击发送请求</button>
+
+    <!-- 封装一个sendAjax函数 发送 GET AJAX 请求 -->
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', () => {
+            sendAjax('https://geoapi.qweather.com/v2/city/lookup?location=南山&key=3167dcff0df247b2925882d0011099eb').then((value) => {
+                console.log(1);
+                console.log(value);
+                console.log(1);
+            }, (reason) => {
+                console.log(reason);
+                console.log(2);
+            })
+        })
+        function sendAjax(url) {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', url);
+                console.log(xhr.readyState);
+                xhr.send();
+                console.log(xhr.readyState);
+
+
+                xhr.onreadyStateChange = function () {
+                    console.log(xhr.readyState);
+                    if (xhr.readyState === 4) {
+                        if (xhr.status >= 200 && xhr.status < 300) {
+                            resolve(xhr.response);
+                        } else {
+                            reject(xhr.status);
+                        }
+                    }
+                };
+
+
+            })
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./promise.js"></script> 
+</head>
+
+<body>
+
+    <script>
+        const p = Promise.reject('error');
+        const p2 = Promise.reject(new Promise((resolve,reject) => {
+            // resolve('Success')
+            reject('ERROR')
+        }));
+        // const p3 = Promise.resolve(Promise.resolve('Oh Yeah'));
+
+        console.log(p);
+        console.log(p2);
+        // console.log(p3);
+
+        // let p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //     // reject('err')
+        //     resolve('OK');
+        //     // throw 'err';
+        //     }, 200)
+        // });
+        // p.then(
+            
+        // ).then(value => {
+        //     console.log(222);
+        // }).then(value => {
+        //     console.log(333);
+        // }).catch(reason => {
+        //     console.warn(reason);
+        // }) 
+
+        // // console.log(p);
+        //     const res = p.then(value => {
+        //         console.log(value);
+        //         // return new Promise((resolve,reject) => {
+        //         // resolve('success');
+        //         // reject('Oh No')
+        //         // throw 'error'
+        //         // })
+        //     }, reason => {
+        //         // return 'oh no'
+        //         // throw 'error'
+        //         console.warn(reason);
+        //     })
+        // // p.then(value => {
+        // //     // console.log(value);
+        // //     alert(value)
+        // // }, reason => {
+        // //     console.warn(reason);
+        // // });
+        // console.log(res);
+    </script>
+</body>
+
+</html>
