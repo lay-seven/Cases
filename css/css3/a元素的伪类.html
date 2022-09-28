@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 这两个伪类只适用于a标签 */
+        /* 由于隐私的原因所以visited只能修改颜色 */
+        /* link表示没访问过的链接 */
+        /* :visited表示访问过的链接(正常的链接)*/
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+    <hr>
+    <a href="https://www.baidu123.com">百度</a>
+</body>
+</html>

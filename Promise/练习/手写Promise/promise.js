@@ -56,7 +56,6 @@ class Promise {
         }
         if (typeof onResolved !== 'function') {
             onResolved = value => value;
-
         }
         return new Promise((resolve, reject) => {
             // 封装函数
@@ -200,7 +199,7 @@ class Promise {
 //     return new Promise((resolve, reject) => {
 //         // 遍历
 //         for (let i = 0; i < promises.length; i++) {
-//             // 
+//             //
 //             promises[i].then(v => {
 //                 // 对象状态为成功，但不能直接写resolve
 //                 arr[i] = v;
